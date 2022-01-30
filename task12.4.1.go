@@ -22,7 +22,6 @@ func main() {
 	file, _ := os.Create("note.txt")
 	t := time.Now()
 	defer file.Close()
-
 	for {
 		num++
 		fmt.Scan(&notes)
@@ -35,6 +34,4 @@ func main() {
 		}
 	}
 	ioutil.WriteFile("note.txt", b.Bytes(), 0666)
-
-	defer file.Close()
 }
